@@ -1,0 +1,10 @@
+.box{
+    display: inline-block;
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+.yellow{
+    background-color: yellow;
+}

@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    US Time Zone Display
+  </h1>
+</div>
+<div>
+  <div class ='box' (click)='getTime("PST")' [ngClass]="{'yellow': currZone === 'PST'}">PST</div>
+  <div class ='box' (click)='getTime("MST")' [ngClass]="{'yellow': currZone === 'MST'}">MST</div>
+  <div class ='box' (click)='getTime("CST")' [ngClass]="{'yellow': currZone === 'CST'}">CST</div>
+  <div class ='box' (click)='getTime("EST")' [ngClass]="{'yellow': currZone === 'EST'}">EST</div>
+  <div class ='box' (click)='getTime("none")'>Clear</div>
+</div>
+<div *ngIf="currZone != 'none'">
+  {{display | date: 'medium' : currZone}}
+</div>
+
